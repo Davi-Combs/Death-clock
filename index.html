@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app">
+        <header>
+            <h1>The Inevitable End</h1>
+        </header>
+
+        <main>
+            <div id="input-screen">
+                <h2>Find Out When It's All Over</h2>
+                <form id="death-form">
+                    <div class="form-group">
+                        <label for="birthdate">Enter Your Birthdate</label>
+                        <input type="date" id="birthdate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pet-preference">Are you a dog or cat person?</label>
+                        <select id="pet-preference">
+                            <option value="dog">Dog Person</option>
+                            <option value="cat">Cat Person</option>
+                        </select>
+                    </div>
+                    <button type="submit">Gaze into the Void</button>
+                </form>
+            </div>
+
+            <div id="countdown-screen" class="hidden">
+                <h2>Your Remaining Time</h2>
+                <div id="timer">
+                    <div class="time-unit">
+                        <span id="years">0</span>
+                        <label>Years</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="months">0</span>
+                        <label>Months</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="days">0</span>
+                        <label>Days</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="hours">0</span>
+                        <label>Hours</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="minutes">0</span>
+                        <label>Minutes</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="seconds">0</span>
+                        <label>Seconds</label>
+                    </div>
+                </div>
+                <div id="end-message" class="hidden">
+                    <p>Your time is up.</p>
+                </div>
+                <button id="start-over-btn">Tempt Fate Again</button>
+            </div>
+
+            <div id="lottery-screen" class="hidden">
+                <h2>Since you're feeling lucky...</h2>
+                <p>Here are this week's winning lottery numbers:</p>
+                <div id="lottery-numbers"></div>
+                <button id="try-again-btn">Play Again</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                <b>Disclaimers: These tools always include disclaimers stating that the predictions are not scientifically accurate and should be used for fun only. Besides only one person knows that exact answer.</b>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
